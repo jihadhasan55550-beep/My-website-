@@ -1,16 +1,488 @@
-<!DOCTYPE html>
-<html>
+DOCTYPE html>
+<html lang="bn">
 <head>
-<title>আমার ওয়েবসাইট</title>
-<style>
-body{ text-align:center; font-family:sans-serif; background:#111; color:white; padding-top:100px; }
-h1{ color:#00ff88; font-size:40px; }
-button{ padding:15px 30px; font-size:18px; background:#00ff88; border:none; border-radius:10px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhaka Imperial College</title>
+    <meta name="description" content="Dhaka Imperial College IT Club - A student website project about education, technology, departments and student activities.">
+    <meta property="og:title" content="Dhaka Imperial College IT Club">
+<meta property="og:description" content="Education, Technology and Student Activities">
+<meta property="og:image" content="./college.jpg">
+<meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="./college.jpg">
+    <style>
+footer h3 {
+    color: #0d47a1 !important;
+    font-weight: bold;
+}
+header {
+    background: linear-gradient(135deg, #003b73, #1683d8);
+    color: white;
+    text-align: center;
+    padding: 45px 15px;
+    border-bottom: 5px solid #ffc107;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+header h2 {
+    font-size: 19px;
+    letter-spacing: 2px;
+}
+
+.site-logo {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.logo-tagline {
+    color: #e3f2fd;
+    letter-spacing: 2px;
+}
+nav {
+    background: #ffffff;
+    padding: 15px 8px;
+    text-align: center;
+    box-shadow: 0 3px 10px #00000015;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    display: inline-block;
+    background: #0756a5;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #ffc107;
+    color: #123456;
+}.welcome-banner {
+    background: linear-gradient(120deg, #e3f2fd, #bbdefb, #e1f5fe);
+    color: #0756a5;
+    text-align: center;
+    padding: 55px 15px;
+    border-radius: 0 0 30px 30px;
+}
+
+.welcome-banner h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+.welcome-banner h2 {
+    color: #1565c0;
+    letter-spacing: 3px;
+}
+
+.welcome-banner p {
+    font-size: 17px;
+    font-weight: bold;
+    color: #455a64;
+}
+
+.welcome-banner h3 {
+    margin-top: 15px;
+    color: #0756a5;
+}#notice {
+    background: #eaf4ff;
+    border: 2px solid #c5e2ff;
+    border-radius: 15px;
+    padding: 22px;
+}
+
+#notice h2 {
+    color: #0756a5;
+    border-bottom: 3px solid #ffc107;
+    padding-bottom: 10px;
+}
+
+.notice-item {
+    background: white;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border-left: 5px solid #1683d8;
+    box-shadow: 0 3px 10px #00000012;
+}
+
+.notice-item h3 {
+    color: #0756a5;
+    margin-bottom: 8px;
+}
+
+.notice-item p {
+    color: #455a64;
+}#gallery {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 22px;
+}
+
+#gallery h2 {
+    color: #0756a5;
+    border-bottom: 3px solid #ffc107;
+    padding-bottom: 10px;
+}
+
+.gallery-box {
+    margin-top: 18px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #00000020;
+}
+
+.gallery-box img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}#activities {
+    background: #eaf4ff;
+    border-radius: 15px;
+    padding: 22px;
+}
+
+#activities h2 {
+    color: #0756a5;
+    border-bottom: 3px solid #ffc107;
+    padding-bottom: 10px;
+}
+
+.activity-image {
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 15px 0;
+}
+
+.activity-image img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+#activities .notice-item {
+    border-left: 5px solid #0756a5;
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+}#itclub {
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    border: 2px solid #bbdefb;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+#itclub h2 {
+    color: #0756a5;
+    border-bottom: 3px solid #ffc107;
+    padding-bottom: 10px;
+}
+
+#itclub p {
+    color: #37474f;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 12px;
+}#departments {
+    background: #ffffff;
+    border: 2px solid #bbdefb;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+#departments h2 {
+    color: #0756a5;
+    border-bottom: 3px solid #ffc107;
+    padding-bottom: 10px;
+}
+
+#departments ul {
+    list-style: none;
+    padding: 0;
+}
+
+#departments li {
+    background: #eaf4ff;
+    color: #0756a5;
+    font-weight: bold;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 10px;
+}#contact {
+    background: #eaf4ff;
+    border: 2px solid #bbdefb;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+#contact h2 {
+    color: #0756a5;
+    border-bottom: 3px solid #ffc107;
+    padding-bottom: 10px;
+}
+
+#contact h3 {
+    color: #0756a5;
+    margin-top: 18px;
+}
+
+#contact p {
+    color: #455a64;
+}
+
+#contact .contact-form {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #00000012;
+}
+
+#contact .contact-form button {
+    background: #0756a5;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}footer {
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    border-radius: 15px 15px 0 0;
+}
+
+footer h3 {
+    color: white !important;
+    font-size: 22px;
+}
+
+footer p {
+    color: #e3f2fd;
+    line-height: 1.8;
+}
+
+footer a {
+    color: #ffeb3b;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}@media (max-width: 600px) {
+    body {
+        padding: 8px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 4px;
+        font-size: 13px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+}html {
+    scroll-behavior: smooth;
+}a[href="#top"] {
+    display: inline-block;
+    background: #0756a5;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+
+a[href="#top"]:hover {
+    background: #ffc107;
+    color: #0756a5;
+}</style>
 </head>
+
 <body>
-<h1>আসসালামু আলাইকুম! 👋</h1>
-<p>এটা আমার প্রথম ওয়েবসাইট।</p>
-<button onclick="alert('তুমি আমার ওয়েবসাইটে এসেছো!')">ক্লিক করো</button>
-</body>
+
+    <header id="home">
+        <div class="site-logo">
+    <span>🎓</span>
+    <strong>DIC</strong>
+</div>
+<p class="logo-tagline">
+    Education • Technology • Future
+</p>
+    <h1>ঢাকা ইমপিরিয়াল কলেজ</h1>
+    <h2>DHAKA IMPERIAL COLLEGE</h2>
+    <p>Student Website Project</p>
+    <p>Designed & Developed By</p>
+    <h3>Dhaka Imperial College IT Club</h3>
+</header>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#departments">Departments</a>
+    <a href="#notice">Notice</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#activities">Activities</a>
+    <a href="#itclub">IT Club</a>
+    <a href="#contact">Contact</a>
+</nav>
+<div class="welcome-banner">
+    <h2>WELCOME TO</h2>
+    <h1>ঢাকা ইমপিরিয়াল কলেজ</h1>
+    <p>Building Knowledge, Creating Future</p>
+    <h3>Dhaka Imperial College IT Club</h3>
+</div><section id="home">
+    <h2>Welcome to Dhaka Imperial College</h2>
+    <p>ঢাকা ইমপিরিয়াল কলেজে তোমাকে স্বাগতম।</p>
+    <p>জ্ঞান, শিক্ষা ও প্রযুক্তির মাধ্যমে গড়ে উঠুক আগামীর সুন্দর ভবিষ্যৎ।
+       
+    <hr>
+
+    ঢাকা ইমপিরিয়াল কলেজ একটি শিক্ষামূলক প্রতিষ্ঠান।
+    এখানে শিক্ষার্থীদের জ্ঞান, সৃজনশীলতা ও প্রযুক্তিগত দক্ষতা
+    বিকাশে গুরুত্ব দেওয়া হয়।
+</p>
+<p>
+    আমাদের লক্ষ্য শিক্ষার্থীদের সুন্দর ভবিষ্যৎ গড়ার পথে
+    উৎসাহিত করা।
+<section id="notice">
+    <h2>📢 Notice Board</h2>
+
+    <div class="notice-item">
+        <h3>📌 গুরুত্বপূর্ণ নোটিশ</h3>
+        <p>কলেজের সকল শিক্ষার্থীদের নিয়মিত নোটিশ বোর্ড দেখার অনুরোধ করা হচ্ছে।</p>
+    </div>
+
+    <div class="notice-item">
+        <h3>📚 পরীক্ষার নোটিশ</h3>
+        <p>পরীক্ষার সময়সূচি প্রকাশিত হলে এখানে জানানো হবে।</p>
+    </div>
+
+    <div class="notice-item">
+        <h3>💻 IT Club Notice</h3>
+        <p>IT Club-এর সকল কার্যক্রম ও আপডেট এখানে প্রকাশ করা হবে।</p>
+    </div>
+</section>
+  <section id="gallery">
+    <h2>📸 Photo Gallery</h2>
+    <p>আমাদের কলেজের কিছু মুহূর্ত</p>
+
+       <div class="gallery-box">
+        <img src="./college.jpg" alt="College Photo" loading="lazy">
+    </div>
+</section>
+
+<section id="activities">
+        <div class="activity-image">
+    <img src="./activity.jpg" alt="Student Activities" loading="lazy">
+</div>
+       
+    <h2>🎯 Student Activities</h2>
+    <p>আমাদের কলেজে শিক্ষার্থীদের বিভিন্ন সৃজনশীল ও শিক্ষামূলক কার্যক্রম পরিচালিত হয়।</p>
+
+    <div class="notice-item">
+        <h3>💻 IT Club</h3>
+        <p>প্রযুক্তি ও ওয়েব ডিজাইন শেখার কার্যক্রম।</p>
+    </div>
+
+    <div class="notice-item">
+        <h3>🎤 Cultural Activities</h3>
+        <p>সাংস্কৃতিক অনুষ্ঠান ও প্রতিভা বিকাশের সুযোগ।</p>
+    </div>
+
+    <div class="notice-item">
+        <h3>⚽ Sports</h3>
+        <p>খেলাধুলা ও শরীরচর্চামূলক কার্যক্রম।</p>
+    </div>
+</section>
+<section id="itclub">
+    <h2>💻 About IT Club</h2>
+
+    <p>
+        Dhaka Imperial College IT Club শিক্ষার্থীদের
+        প্রযুক্তিগত জ্ঞান, সৃজনশীলতা ও দক্ষতা
+        বিকাশে উৎসাহিত করে।
+    </p>
+
+    <p>
+        আমাদের লক্ষ্য শিক্ষার্থীদের Web Design,
+        Programming এবং Technology সম্পর্কে
+        শেখার সুযোগ তৈরি করা।
+    </p>
+<section id="departments">
+    <h2>আমাদের বিভাগ</h2>
+
+    <ul>
+        <li>🔬 Science</li>
+        <li>📚 Humanities</li>
+        <li>💼 Business Studies</li>
+    </ul>
+</section>
+
+    <h2 id="contact">যোগাযোগ</h2>
+    <div class="contact-card">
+        <div class="contact-form">
+    <h3>📩 Send Us a Message</h3>
+
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea placeholder="Write your message"></textarea>
+
+    <button type="button">Send Message</button>
+</div>
+    <h3>📍 College Location</h3>
+    <p>Dhaka Imperial College, Bangladesh</p>
+
+    <h3>💻 IT Club</h3>
+    <p>Dhaka Imperial College IT Club</p>
+
+    <h3>📧 Email</h3>
+    <p>Email address will be added soon.</p>
+</div>
+    <p>বাংলাদেশ</p>
+<footer>
+    <h3>Dhaka Imperial College</h3>
+    <p>Designed & Developed By</p>
+    <p>Dhaka Imperial College IT Club</p>
+    <p>© 2026 All Rights Reserved</p>
+    <p>Made with ❤️ by DIC IT Club</p>
+<p>Student Website Project | 2026</p>
+<div class="social-links">
+    <h3>Follow Us</h3>
+    <a href="#" target="_blank">Facebook</a>
+    <a href="#" target="_blank">YouTube</a>
+</div></footer>
+<a href="#home" class="top-button">⬆ Back to Top</a></body>
 </html>
